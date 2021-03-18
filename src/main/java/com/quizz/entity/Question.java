@@ -2,6 +2,7 @@ package com.quizz.entity;
 
 import java.util.List;
 
+
 public class Question {
     private int id;
     private String question;
@@ -16,6 +17,9 @@ public class Question {
         this.question = question;
         this.isMultipleChoiceQuestion = isMultipleChoiceQuestion;
         this.answers = answers;
+    }
+
+    public Question(String question) {
     }
 
     public int getId() {

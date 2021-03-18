@@ -2,6 +2,8 @@ package com.quizz.api;
 
 import com.quizz.data.ItemData;
 import com.quizz.data.QuestionData;
+import com.quizz.dto.DtoAnswer;
+import com.quizz.dto.DtoQuestion;
 import com.quizz.entity.Item;
 import com.quizz.entity.Question;
 import org.springframework.web.bind.annotation.GetMapping;

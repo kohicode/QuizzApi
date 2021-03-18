@@ -1,5 +1,7 @@
 package com.quizz.entity;
 
+
+
 public class Answer {
     private int id;
     private String answer;

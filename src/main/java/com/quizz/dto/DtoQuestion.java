@@ -1,5 +1,6 @@
 package com.quizz.dto;
 
+import com.quizz.data.QuestionData;
 import com.quizz.entity.Answer;
 import com.quizz.entity.Question;
 
@@ -9,7 +10,6 @@ public class DtoQuestion {
     private int id;
     private String question;
     private boolean isMultipleChoiceQuestion;
-    private String explanation;
     private int itemId;
     private List<DtoAnswer> answers;
 
@@ -37,14 +37,6 @@ public class DtoQuestion {
         isMultipleChoiceQuestion = multipleChoiceQuestion;
     }
 
-    public String getExplanation() {
-        return explanation;
-    }
-
-    public void setExplanation(String explanation) {
-        this.explanation = explanation;
-    }
-
     public int getItemId() {
         return itemId;
     }
@@ -60,6 +52,16 @@ public class DtoQuestion {
     public void setAnswers(List<DtoAnswer> answers) {
         this.answers = answers;
     }
-    public DtoQuestion(){}
 
+    public DtoQuestion(int id, String question, boolean isMultipleChoiceQuestion, int itemId, List<DtoAnswer> answers) {
+        this.id = id;
+        this.question = question;
+        this.isMultipleChoiceQuestion = isMultipleChoiceQuestion;
+        this.itemId = itemId;
+        this.answers = answers;
+    }
+
+    public Question toEntity(){
+        return new Question(question);
+    }
 }

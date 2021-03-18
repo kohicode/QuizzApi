@@ -1,8 +1,6 @@
 package com.quizz.dto;
 
 
-
-
 public class DtoAnswer {
     private int id;
     private String answer;
@@ -20,6 +18,11 @@ public class DtoAnswer {
     }
 
     public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public DtoAnswer(int id, String answer) {
+        this.id = id;
         this.answer = answer;
     }
 }
