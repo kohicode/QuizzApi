@@ -1,8 +1,9 @@
 package com.quizz.api;
 
-
 import com.quizz.data.ItemData;
+import com.quizz.data.QuestionData;
 import com.quizz.entity.Item;
+import com.quizz.entity.Question;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,12 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/api/v1/catergories")
-public class GetCategoryApi {
-    private static final ItemData itemData = new ItemData();
+@RequestMapping(value="/api/question")
+
+public class GetQuestionData {
+
+    private static final QuestionData questionData = new QuestionData();
 
     @GetMapping
-    public List<Item> getItems(){
-        return itemData.getItems();
+    public List<Question> getQuestions(){
+        return questionData.getQuestions();
     }
+
 }

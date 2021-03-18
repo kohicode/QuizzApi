@@ -20,7 +20,7 @@ public class QuestionData {
         questions = Arrays.asList(questionArray);
     }
 
-    public static List<Question> getQuestions() {
+    public List<Question> getQuestions() {
         return questions;
     }
 
